@@ -203,4 +203,6 @@ exports.addEtudiant = (req, res)=>{
     console.log(req.body) ; 
     return res.redirect('/etudiant') ;
 
+    
+
 }

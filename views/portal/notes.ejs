@@ -6,29 +6,83 @@
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                 <div class="me-md-3 me-xl-5">
-                    <h2>Gestion des Etudiants</h2>
+                    <h2>Gestion des notes etudiants</h2>
                     <p class="mb-md-5">Gestions des etudiants du portail etudiant</p>
                 </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-end flex-wrap">
-                <button type="button" class="btn btn-light bg-white btn-icon me-3 d-none d-md-block ">
-                    <i class="mdi mdi-download text-muted"></i>
-                </button>
-                <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0">
-                    <i class="mdi mdi-clock-outline text-muted"></i>
-                </button>
-                <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0" data-toggle="modal" data-target="#exampleModalCenter">
-                    <i class="mdi mdi-plus text-muted"></i>
-                </button>
+                </div>
             </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Ajouter Notes à une classe</h4>
+                    <p class="card-description">
+                      Basic form layout
+                    </p>
+                    <form class="forms-sample">
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">Année Académique</label>
+                            <input type="text" class="form-control" id="exampleInputUsername1" placeholder="ex : 2020-2021">
+                        </div>
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Classes</label>
+                        <div class="col-md-12">
+                            <select class="form-control" name="classe">
+                              <option value="10">LAP 1 A</option>
+                              <option value="11">LAP 1 B</option>
+                              <option value="12">LAP 2 A</option>
+                              <option value="13">LAP 2 B</option>
+                              <option value="14">LAP 3 </option>
+                              <option value="15">DUT IG 1</option>
+                              <option value="16">DUT IG 2</option>
+                              <option value="1">LIC INFO 1 A</option>
+                              <option value="2">LIC INFO 1 B</option>
+                              <option value="3">LIC INFO 1 C</option>
+                              <option value="4">LIC INFO 2 A</option>
+                              <option value="5">LIC INFO 2 B</option>
+                              <option value="6">LIC INFO 3 GL</option>
+                              <option value="8">LIC INFO 3 SR</option>
+                              
+                            </select>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Modules</label>
+                        <select class="form-control" name="classe"> 
+                            <option value="10">Algorithme et Programation</option>
+                            <option value="11">Bases de données</option>
+                            <option value="12">Circuit Logique</option>
+                            <option value="13">Maths pour Informatique</option>                            
+                          </select>
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input">
+                          Devoir
+                        </label>
+                      </div>
+                      <div class="form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input">
+                          Examens
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary me-2">Valider</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
         </div>
         
         <div class="row">
           <div class="col-md-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Listes des</h4>
+                <h4 class="card-title">Notes recentes</h4>
                 <p class="card-description">
                   
                 </p>
@@ -49,20 +103,21 @@
                           Matricule
                         </th>
                         <th>
-                          Telephone
-                        </th>
-                        <th>
                           Classe
                         </th>
                         <th>
-                          Actions
+                          Note
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                       
-                      <% })%>   
-                      </tr>
+                       <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                       </tr>
                       
                     </tbody>
                   </table>
