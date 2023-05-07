@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express.Router()
 
+const ctrEtudiant = require('../controller/etudiant.contr'); 
+
 
 
 app.get('/',  (req, res)=> {
@@ -49,5 +51,10 @@ app.get('/inscription', (req, res)=>{
 app.get('/supcours', (req, res)=>{
     res.render('portal/spcours');
 })
+
+
+// METHODES POSTS
+
+app.post('/addEtudiant', ctrEtudiant.addEtudiant ) ; 
 
 module.exports = app ;

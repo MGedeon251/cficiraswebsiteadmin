@@ -23,8 +23,11 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        
+        <div class="row"> 
           <div class="col-12 grid-margin">
+            <%- include('../includes/partials_message') %>
+            <form action="/addEtudiant" method="post">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">AJOUTER UN ETUDIANT</h4>
@@ -37,7 +40,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Noms</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                              <input type="text" class="form-control" name="et_nom" />
                             </div>
                           </div>
                         </div>
@@ -45,7 +48,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Prenoms</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                              <input type="text" class="form-control" name="et_prenom" />
                             </div>
                           </div>
                         </div>
@@ -56,8 +59,8 @@
                             <label class="col-sm-3 col-form-label">Sexe</label>
                             <div class="col-sm-9">
                               <select class="form-control">
-                                <option>Homme</option>
-                                <option>Femme</option>
+                                <option value="homme">Homme</option>
+                                <option value="femme">Femme</option>
                               </select>
                             </div>
                           </div>
@@ -66,7 +69,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Date de naissance</label>
                             <div class="col-sm-9">
-                              <input class="form-control" placeholder="dd/mm/yyyy"/>
+                              <input class="form-control" placeholder="dd/mm/yyyy"/ name="et_datenais">
                             </div>
                           </div>
                         </div>
@@ -101,7 +104,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Telephone </label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                              <input type="text" class="form-control" name="et_tel" />
                             </div>
                           </div>
                         </div>
@@ -114,7 +117,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Matricule</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                              <input type="text" class="form-control" name="et_tel" />
                             </div>
                           </div>
                         </div>
@@ -122,7 +125,9 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">e-mail</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" placeholder="users@exemple.com"/>
+                              <input type="text" class="form-control" 
+                              placeholder="users@exemple.com"
+                              name="et_mail"/>
                             </div>
                           </div>
                         </div>
@@ -132,7 +137,8 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Mot de passe</label>
                             <div class="col-sm-9">
-                              <input type="password" class="form-control" />
+                              <input type="password" class="form-control" 
+                              name="password"/>
                             </div>
                           </div>
                         </div>
@@ -147,15 +153,15 @@
                       </div>
                       <div class="row">
                         <div class="col-md-6">
-                          <button type="button" class="btn btn-primary btn-lg btn-block">
+                          <button type="submit" class="btn btn-primary btn-lg btn-block">
                             <i class="mdi mdi-file-check btn-icon-prepend"></i>
                             Valider</button>
                         </div>
                       </div>
-
                     </form>
                   </div>
                 </div>
+              </form>
               </div>
         </div>
 
@@ -221,7 +227,7 @@
                     </tbody>
                   </table>
                 </div>
-                
+
               </div>
             </div>
           </div>

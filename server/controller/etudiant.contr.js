@@ -155,7 +155,7 @@ exports.getEtudiantLap2A = (req, res)=>{
 
 exports.addEtudiant = (req, res)=>{
     const {et_nom, et_prenom, et_matricule, et_sexe, et_datenais ,classe  } = req.body ;
-    const {cmatricule , password }= req.body ; 
+    let {cmatricule , password }= req.body ; 
     const newEtudiant={ 
         et_nom, 
         et_prenom, 
@@ -197,10 +197,11 @@ exports.addEtudiant = (req, res)=>{
         if(err){ req.flash("message", "Une erreur est survenue au niveau de la base de données !")
                  return res.redirect('/etudiant') } ; 
         connexion.query('INSERT INTO portal_etudiant SET ?', [newEtudiant]) ;
-        connection = connexion.query('INSERT INTO portal_compte SET compt_matricule = ? , password = ?', 
+        connexion.query('INSERT INTO portal_compte SET compt_matricule = ? , password = ?', 
         [cmatricule, hash_pwd]) ; 
         connexion.release() ;
-        req.flash("success" , "Demande envoyer avec succès"); 
+        req.flash("success" , "Demande envoyer avec succès");
+        console.log(req.body) ; 
         return res.redirect('/Etudiant') ; 
     })
 
