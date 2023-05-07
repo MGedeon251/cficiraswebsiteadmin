@@ -5,10 +5,10 @@ const saltRound = 10 ;
 
 exports.getAllEtudiant = (req, res)=>{
     connection.query(`SELECT *
-                      FROM portal_etudiants`,
+                      FROM etudiants_par_classe_cplet`,
                 (err,rows)=>{
                 if(err){
-                    req.flash("message", "Erreur au niveau de la base de données")
+                    req.flash("message", "Impossible de charger cette page")
                     res.redirect('/home')
                 }
                 else{ res.render('portal/etudiant', { data : rows } )
@@ -154,13 +154,14 @@ exports.getEtudiantLap2A = (req, res)=>{
 }
 
 exports.addEtudiant = (req, res)=>{
-    const {et_nom, et_prenom, et_matricule, et_sexe, et_datenais ,classe  } = req.body ;
+    const {et_nom, et_prenom, et_matricule, et_sexe,et_tel, et_datenais , classe  } = req.body ;
     let {cmatricule , password }= req.body ; 
     const newEtudiant={ 
         et_nom, 
         et_prenom, 
         et_matricule, 
         et_sexe, 
+        et_tel, 
         et_datenais ,
         classe
     } ; 
@@ -190,19 +191,16 @@ exports.addEtudiant = (req, res)=>{
         req.flash("message", " Le champ 'Mot de passe' ne peut être vide")
         return res.redirect('/etudiant') ; 
     }
-     
+    // CREATION DE L'ETUDIANT
+    connection.query("INSERT INTO `portal_etudiant` (`et_matricule`, `et_nom`, `et_prenom` , `et_datenais` , `et_tel` , `classe`) values (?,?,?,?,?,?) ", 
+    [et_matricule,et_nom,et_prenom,et_datenais,et_tel,classe]) ;
+    // CREATION DU COMPTE D'UTILISATEUR
     const hash_pwd = bcrypt.hashSync(password,saltRound);
     cmatricule = newEtudiant.et_matricule; 
-    connection.getConnection((err, connexion) => {
-        if(err){ req.flash("message", "Une erreur est survenue au niveau de la base de données !")
-                 return res.redirect('/etudiant') } ; 
-        connexion.query('INSERT INTO portal_etudiant SET ?', [newEtudiant]) ;
-        connexion.query('INSERT INTO portal_compte SET compt_matricule = ? , password = ?', 
-        [cmatricule, hash_pwd]) ; 
-        connexion.release() ;
-        req.flash("success" , "Demande envoyer avec succès");
-        console.log(req.body) ; 
-        return res.redirect('/Etudiant') ; 
-    })
+    connection.query("INSERT INTO `portal_compte` (`compt_matricule`, `compt_password`) values (?,?)", 
+    [cmatricule, hash_pwd]) ;  
+    req.flash("success" , "Etudiant enregistré avec succèss");
+    console.log(req.body) ; 
+    return res.redirect('/etudiant') ;
 
 }

@@ -17,9 +17,7 @@ app.get('/login', (req, res)=> {
     res.render('auth-view/login');
 });
 
-app.get('/etudiant', (req, res)=>{
-    res.render('portal/etudiant');
-})
+app.get('/etudiant',ctrEtudiant.getAllEtudiant); 
 
 app.get('/modules', (req, res)=>{
     res.render('portal/modules');

@@ -79,22 +79,22 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Classe</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
+                              <select class="form-control" name="classe">
                                 
-                                <option>LAP 1 A</option>
-                                <option>LAP 1 B</option>
-                                <option>LAP 2 A</option>
-                                <option>LAP 2 B</option>
-                                <option>LAP 3 </option>
-                                <option>DUT IG 1</option>
-                                <option>DUT IG 2</option>
-                                <option>LIC INFO 1 A</option>
-                                <option>LIC INFO 1 B</option>
-                                <option>LIC INFO 1 C</option>
-                                <option>LIC INFO 2 A</option>
-                                <option>LIC INFO 2 B</option>
-                                <option>LIC INFO 3 GL</option>
-                                <option>LIC INFO 3 SR</option>
+                                <option value="10">LAP 1 A</option>
+                                <option value="11">LAP 1 B</option>
+                                <option value="12">LAP 2 A</option>
+                                <option value="13">LAP 2 B</option>
+                                <option value="14">LAP 3 </option>
+                                <option value="15">DUT IG 1</option>
+                                <option value="16">DUT IG 2</option>
+                                <option value="1">LIC INFO 1 A</option>
+                                <option value="2">LIC INFO 1 B</option>
+                                <option value="3">LIC INFO 1 C</option>
+                                <option value="4">LIC INFO 2 A</option>
+                                <option value="5">LIC INFO 2 B</option>
+                                <option value="6">LIC INFO 3 GL</option>
+                                <option value="8">LIC INFO 3 SR</option>
                                 
                               </select>
                             </div>
@@ -117,7 +117,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Matricule</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" name="et_tel" />
+                              <input type="text" class="form-control" name="et_matricule" />
                             </div>
                           </div>
                         </div>
@@ -190,6 +190,9 @@
                           Matricule
                         </th>
                         <th>
+                          Telephone
+                        </th>
+                        <th>
                           Classe
                         </th>
                         <th>
@@ -199,22 +202,15 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          LEKOUNDA NGOLO
-                        </td>
-                        <td>
-                          Mardochet Gedeon
-                        </td>
-                        <td>
-                          2023145GL
-                        </td>
-                        <td>
-                          LIC INFO 3 GL
-                        </td>
-                        <td>
+                        <% var i= 0; %>
+                        <% data.forEach(row => { %>
+                          <td><%=++i;  %></td>
+                          <td><%=row.Nom%> </td>
+                          <td><%=row.Prenom%></td>
+                          <td><%=row.matricule%></td>
+                          <td><%=row.Tel%></td>
+                          <td><%=row.clas_abrev%></td></td>
+                          <td>
                           <button type="button" class="btn btn-inverse-warning btn-fw btn-sm btn-block">
                             <i class="mdi mdi-file-check btn-icon-prepend"></i>                                                    
                           </button>
@@ -222,6 +218,8 @@
                             <i class="mdi mdi-alert btn-icon-prepend"></i>                                                    
                           </button>
                         </td>
+                      </tr> 
+                      <% })%>   
                       </tr>
                       
                     </tbody>
