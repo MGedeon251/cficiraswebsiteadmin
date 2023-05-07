@@ -1,0 +1,228 @@
+<%-include('../includes/header')%>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="d-flex align-items-end flex-wrap">
+                <div class="me-md-3 me-xl-5">
+                    <h2>Gestion des Etudiants</h2>
+                    <p class="mb-md-5">Gestions des etudiants du portail etudiant</p>
+                </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                <button type="button" class="btn btn-light bg-white btn-icon me-3 d-none d-md-block ">
+                    <i class="mdi mdi-download text-muted"></i>
+                </button>
+                <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0">
+                    <i class="mdi mdi-clock-outline text-muted"></i>
+                </button>
+                <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0" data-toggle="modal" data-target="#exampleModalCenter">
+                    <i class="mdi mdi-plus text-muted"></i>
+                </button>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">AJOUTER UN ETUDIANT</h4>
+                    <form class="form-sample">
+                      <p class="card-description">
+                        Informations Personnel
+                      </p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Noms</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Prenoms</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Sexe</label>
+                            <div class="col-sm-9">
+                              <select class="form-control">
+                                <option>Homme</option>
+                                <option>Femme</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date de naissance</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" placeholder="dd/mm/yyyy"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Classe</label>
+                            <div class="col-sm-9">
+                              <select class="form-control">
+                                
+                                <option>LAP 1 A</option>
+                                <option>LAP 1 B</option>
+                                <option>LAP 2 A</option>
+                                <option>LAP 2 B</option>
+                                <option>LAP 3 </option>
+                                <option>DUT IG 1</option>
+                                <option>DUT IG 2</option>
+                                <option>LIC INFO 1 A</option>
+                                <option>LIC INFO 1 B</option>
+                                <option>LIC INFO 1 C</option>
+                                <option>LIC INFO 2 A</option>
+                                <option>LIC INFO 2 B</option>
+                                <option>LIC INFO 3 GL</option>
+                                <option>LIC INFO 3 SR</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Telephone </label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-description">
+                        Creation Compte
+                      </p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Matricule</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">e-mail</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" placeholder="users@exemple.com"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Mot de passe</label>
+                            <div class="col-sm-9">
+                              <input type="password" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Confirmation </label>
+                            <div class="col-sm-9">
+                              <input type="password" class="form-control" placeholder="Confirmer le mot de passe" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <button type="button" class="btn btn-primary btn-lg btn-block">
+                            <i class="mdi mdi-file-check btn-icon-prepend"></i>
+                            Valider</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Etudiants ajouté recement</h4>
+                <p class="card-description">
+                  
+                </p>
+                <div class="table-responsive pt-3">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>
+                          #
+                        </th>
+                        <th>
+                          Nom
+                        </th>
+                        <th>
+                          Prenoms
+                        </th>
+                        <th>
+                          Matricule
+                        </th>
+                        <th>
+                          Classe
+                        </th>
+                        <th>
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>
+                          LEKOUNDA NGOLO
+                        </td>
+                        <td>
+                          Mardochet Gedeon
+                        </td>
+                        <td>
+                          2023145GL
+                        </td>
+                        <td>
+                          LIC INFO 3 GL
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-inverse-warning btn-fw btn-sm btn-block">
+                            <i class="mdi mdi-file-check btn-icon-prepend"></i>                                                    
+                          </button>
+                          <button type="button" class="btn btn-inverse-danger btn-fw btn-sm btn-block">
+                            <i class="mdi mdi-alert btn-icon-prepend"></i>                                                    
+                          </button>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<%-include('../includes/footer')%>
