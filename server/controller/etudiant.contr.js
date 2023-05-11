@@ -5,7 +5,7 @@ const saltRound = 10 ;
 
 exports.getAllEtudiant = (req, res)=>{
     connection.query(`SELECT *
-                      FROM etudiants_par_classe_cplet`,
+                      FROM etudiants_par_classe`,
                 (err,rows)=>{
                 if(err){
                     req.flash("message", "Impossible de charger cette page")
@@ -197,12 +197,25 @@ exports.addEtudiant = (req, res)=>{
     // CREATION DU COMPTE D'UTILISATEUR
     const hash_pwd = bcrypt.hashSync(password,saltRound);
     cmatricule = newEtudiant.et_matricule; 
-    connection.query("INSERT INTO `portal_compte` (`compt_matricule`, `compt_password`) values (?,?)", 
+    connection.query( "INSERT INTO `portal_compte` (`compt_matricule`, `compt_password`) values (?,?)", 
     [cmatricule, hash_pwd]) ;  
     req.flash("success" , "Etudiant enregistré avec succèss");
     console.log(req.body) ; 
     return res.redirect('/etudiant') ;
+}
 
+exports.getId=(matricule)=> {
     
+    return new Promise((resolve, reject) => {
+        connection.query('select * from etudiants_par_classe where Matricule= ?',
+            [matricule],
+            (err, resultat) => {
+                if (err) reject(err);
+                else resolve(resultat[0]);
+            });
+    });
+}
+exports.getEtudiantById= (req, res)=>{
+
 
 }

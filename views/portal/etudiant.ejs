@@ -80,7 +80,6 @@
                             <label class="col-sm-3 col-form-label">Classe</label>
                             <div class="col-lg-10">
                               <select class="form-control" name="classe">
-                                
                                 <option value="10">LAP 1 A</option>
                                 <option value="11">LAP 1 B</option>
                                 <option value="12">LAP 2 A</option>
@@ -95,7 +94,6 @@
                                 <option value="5">LIC INFO 2 B</option>
                                 <option value="6">LIC INFO 3 GL</option>
                                 <option value="8">LIC INFO 3 SR</option>
-                                
                               </select>
                             </div>
                           </div>
@@ -207,16 +205,21 @@
                           <td><%=++i;  %></td>
                           <td><%=row.Nom%> </td>
                           <td><%=row.Prenom%></td>
-                          <td><%=row.matricule%></td>
+                          <td><%=row.Matricule%></td>
                           <td><%=row.Tel%></td>
                           <td><%=row.clas_abrev%></td></td>
                           <td>
-                          <button type="button" class="btn btn-inverse-warning btn-fw btn-sm btn-block">
-                            <i class="mdi mdi-file-check btn-icon-prepend"></i>                                                    
-                          </button>
-                          <button type="button" class="btn btn-inverse-danger btn-fw btn-sm btn-block">
-                            <i class="mdi mdi-alert btn-icon-prepend"></i>                                                    
-                          </button>
+                          
+                          <a href="/update/<%= row.Matricule%>">
+                            <button type="button" class="btn btn-inverse-warning btn-fw btn-sm btn-block">
+                              <i class="mdi mdi-file-check btn-icon-prepend"></i>                                                    
+                            </button>
+                          </a>
+                          <a href="">
+                            <button type="button" class="btn btn-inverse-danger btn-fw btn-sm btn-block">
+                              <i class="mdi mdi-alert btn-icon-prepend"></i>                                                    
+                            </button>
+                          </a>
                         </td>
                       </tr> 
                       <% })%>   

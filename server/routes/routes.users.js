@@ -50,6 +50,37 @@ app.get('/supcours', (req, res)=>{
     res.render('portal/spcours');
 })
 
+app.get('/update/:id', function (req, res, next) {
+        ctrEtudiant.getId(req.params.id).then(data => {
+            if (data) {
+                res.render("portal/_details", {
+                    data : data
+                });
+            } else {
+                req.flash("message","Pas d'etudiant trouvé avec ce matricule")
+                return res.redirect('etudiant');
+            }
+        })
+        .catch(err => {
+            return res.status(500).send("Erreur recupération de données");
+        });
+});
+
+app.get('/delete/:id',function (req, res, next) {
+    ctrEtudiant.getId(req.params.id).then(data => {
+        if (data) {
+            res.render("portal/_details", {
+                data : data
+            });
+        } else {
+            req.flash("message","Pas d'etudiant trouvé avec ce matricule")
+            return res.redirect('etudiant');
+        }
+    })
+    .catch(err => {
+        return res.status(500).send("Erreur recupération de données");
+    });
+});
 
 // METHODES POSTS
 
