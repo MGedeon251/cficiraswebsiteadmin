@@ -1,0 +1,103 @@
+<%-include('../includes/header')%>
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Informations Personnel</h4>
+                  <p class="card-description">
+                    
+                  </p>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Noms</label>
+                      <input type="text" class="form-control" 
+                      id="exampleInputUsername1" placeholder="Username"
+                      value="<%=data.Nom %>" >
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Prenoms</label>
+                      <input type="email" class="form-control" 
+                      id="exampleInputEmail1" placeholder="Prenoms"
+                      value="<%=data.Prenom%>" >
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Date de naissance</label>
+                      <input type="password" class="form-control" 
+                      id="exampleInputPassword1" placeholder="date naissance">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputConfirmPassword1">Telephone</label>
+                      <input type="text" class="form-control" 
+                      id="exampleInputConfirmPassword1" placeholder="Password"
+                      value="<%=data.Tel %>" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputConfirmPassword1">Email</label>
+                        <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        Remember me
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Information sur le parcour</h4>
+                  <p class="card-description">
+                    
+                  </p>
+                  <form class="forms-sample">
+                    <div class="form-group row">
+                      <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Année academique</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Classe</label>
+                      <div class="col-sm-9">
+                        <select class="form-control" name="classe" 
+                        value="<%=data.clas_abrev%>" >
+                            <option value="10">LAP 1 A</option>
+                            <option value="11">LAP 1 B</option>
+                            <option value="12">LAP 2 A</option>
+                            <option value="13">LAP 2 B</option>
+                            <option value="14">LAP 3 </option>
+                            <option value="15">DUT IG 1</option>
+                            <option value="16">DUT IG 2</option>
+                            <option value="1">LIC INFO 1 A</option>
+                            <option value="2">LIC INFO 1 B</option>
+                            <option value="3">LIC INFO 1 C</option>
+                            <option value="4">LIC INFO 2 A</option>
+                            <option value="5">LIC INFO 2 B</option>
+                            <option value="6">LIC INFO 3 GL</option>
+                            <option value="8">LIC INFO 3 SR</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputMobile" class="col-sm-3 col-form-label">Cycle</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="exampleInputMobile" placeholder="Licence ou DUT">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Valider</button>
+                    <button class="btn btn-light">Annuler</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+
+
+<%-include('../includes/footer')%>
