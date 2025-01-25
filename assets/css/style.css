@@ -8635,8 +8635,8 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 0, 0, 0;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Poppins" , system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace:  , "Poppins"SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: "Charlie Text" , system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace:  , "Charlie Text", "Segoe UI", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
@@ -19436,43 +19436,201 @@ input:focus {
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Light.eot");
-  src: url("../fonts/Roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/67WF3xGxF81QiZRksym42A/cf7c507569cbbee461ff241902706970/Charlie_Display-Thin_Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/PanXvQtfIyAqIFbGpM8IM/b9b87b3c6ffee63861eb501a0cb160d1/Charlie_Display-Thin_Italic.woff)
+          format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Bold.eot");
-  src: url("../fonts/Roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-family: "Charlie Display";
   font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/8JLDocv5sujCQIY4WEZsz/ebe26b857bf93efe919a72c3697afa82/Charlie_Display-Light.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/1rikelY7zYfVVcGF0ufCMx/5525e29555ebb0b403de182f334e7f2b/Charlie_Display-Light.woff)
+          format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Medium.eot");
-  src: url("../fonts/Roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/8JLDocv5sujCQIY4WEZsz/ebe26b857bf93efe919a72c3697afa82/Charlie_Display-Light.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/1rikelY7zYfVVcGF0ufCMx/5525e29555ebb0b403de182f334e7f2b/Charlie_Display-Light.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/6nq3flI8NfgICrz3jZjLyD/81918253d594b7bb77eb898a468d4328/Charlie_Display-Regular.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/2GTE85R9nfLI58KxINGukf/9d35203b2fe1d4a89031954f118b6c9f/Charlie_Display-Regular.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/6zBd9BZlMVg6Lzzo0c9JTB/d9954046ee355a5fdbf2c5212675e67e/Charlie_Display-Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/68hDvJoBF5iblYktO69b1g/7fd2a9f3582c8fc11d9d27fcfed38dd8/Charlie_Display-Italic.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: normal;
+  font-display: swap;
   font-weight: 500;
-  font-style: normal;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/3KRSiun937K2pXBPYiUwgB/17f578e7699c12924de360e09c018c7c/Charlie_Display-Semibold.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/oQSiwcfMwyNafeeJ3DIku/364b1a7409856a36ab05c2b43a1f9bde/Charlie_Display-Semibold.woff)
+          format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Regular.eot");
-  src: url("../fonts/Roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/65xdTmUlQXTZEebPv41QKG/d21f19bb0e731f88caa3be64700a49f0/Charlie_Display-Semibold_Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/T73q5xRByE5hy55AGMp54/67810084a3efdb1999b56f6542c85d01/Charlie_Display-Semibold_Italic.woff)
+          format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Black.eot");
-  src: url("../fonts/Roboto/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Black.woff") format("woff"), url("../fonts/Roboto/Roboto-Black.ttf") format("truetype");
+  font-family: "Charlie Display";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/55uCHq9XzIzIG8yO7WRqfM/b62779fff17f06743e490f6d98a2001a/Charlie_Display-Bold.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/7lMBcxnaE1rq1n9am4LaWV/b17259435611992f2a6ffe48ca213f84/Charlie_Display-Bold.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/2o3Zm0no6lPnln5cHb7JR6/55f0b66048535d78193f516062ff58e4/Charlie_Display-Bold_Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/2hEATjlHYKgFNGG3XEE8FL/e5e32f1fdd86414237477cc7130acf13/Charlie_Display-Bold_Italic.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/2QtjA2B9aCIa8HvyZcNWqL/886e02c2b15732bc62dc9550078d991c/Charlie_Display-Black.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/7mOCTVLMRdYynIubPDry0Y/85324db781253d544cf91d5c9078a820/Charlie_Display-Black.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 800;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/42ZnX9r0FEEC9i6aTjhGvx/9928d2d161b763db60a50c3edf0bfe78/Charlie_Display-Black_Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/7J5fycblWMmgmMrC850GL9/610d735e3d4680bb111cfb40507beab7/Charlie_Display-Black_Italic.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Display";
+  font-style: italic;
+  font-display: swap;
   font-weight: 900;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/2aGTtufjwlwNeuEifuVsDA/933ed19de4d808d8c9618a0a96f282f0/Charlie_Display-Ultra.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/61USbw5Es8ifbW4QjjYATl/19979d7f1ff46dfe7c7b79e15aacc4bc/Charlie_Display-Ultra.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Text";
   font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/1vzZOZUcRsW8G3dlrVRc9E/6b8b429a3a35eeda98227874727af9ef/Charlie_Text-Thin.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/csqcs1t6l1ByKLqji08Sd/7354daf990b1232c01f11b79c86b8b73/Charlie_Text-Thin.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Text";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/7JQoYrWJG8qtt0hqnGgei9/6d94ac079ded70cdced3b8b448890c3e/Charlie_Text-Thin_Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/XA1kYory8Dhr5QrsKMlYY/df361dee9663b39de9eb21a1279b9399/Charlie_Text-Thin_Italic.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Text";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/1rfmGoSYAfdBOsdsg9qKLL/9ea188cbd87592d6ab6012f191958252/Charlie_Text-Light.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/1XWcCzbf5viNQnIbOqfeI4/8ccdfc8336f9ecb15e2f849c3fc51340/Charlie_Text-Light.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Text";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/6S05s3tlC46wX9fKFizj1K/2cfa443b8c44adce54d1159035e38b23/Charlie_Text-Light_Italic.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/3kW42zdybmQkfndtF54bd1/910ddde712b570829f385b62476b2ea9/Charlie_Text-Light_Italic.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Text";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/41EruTPEOU9hcBwH94UVuZ/73ac40404d750278b451bf2adf186b1b/Charlie_Text-Regular.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/6h4LgfzSDGYFyOvrNTr21p/99d04355f5ef0b92b882013bb0857cf9/Charlie_Text-Regular.woff)
+          format("woff");
+}
+
+@font-face {
+  font-family: "Charlie Text";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(//assets.ctfassets.net/rz1oowkt5gyp/2d4nxzJwX8hfIqUN71D4OD/5e2c0c2a3677d935e91dd46635d5149d/Charlie_Text-Semibold.woff2)
+          format("woff2"),
+      url(//assets.ctfassets.net/rz1oowkt5gyp/4Y73c86mEJg3PJBgQe0L8t/a5d27d39320e9703ed48dd3bdb308408/Charlie_Text-Semibold.woff)
+          format("woff");
 }
 
 .bg-twitter {
@@ -19550,7 +19708,7 @@ input:focus {
 /* Typography */
 body {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Charlie Text", sans-serif;
   font-weight: initial;
   line-height: normal;
   -webkit-font-smoothing: antialiased;
@@ -19815,7 +19973,7 @@ pre {
 code {
   padding: 5px;
   color: #ff4747;
-  font-family: "Roboto", sans-serif;
+  font-family: "Charlie Text", sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   border-radius: 4px;
@@ -19831,7 +19989,7 @@ code {
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
   font-size: calc(0.875rem - 0.05rem);
-  font-family: "Roboto", sans-serif;
+  font-family: "Charlie Text", sans-serif;
   font-weight: 400;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -22418,7 +22576,7 @@ dl li {
 .sidebar {
   min-height: calc(100vh - 60px);
   background: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Charlie Display","Segoe UI", sans-serif;
   font-weight: 400;
   padding: 0;
   width: 257px;
